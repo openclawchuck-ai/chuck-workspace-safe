@@ -1,0 +1,8 @@
+*.tar.gz
+*.log
+memory/
+sessions/
+auth/
+credentials/
+*.jsonl
+*.bak
