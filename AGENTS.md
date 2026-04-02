@@ -389,6 +389,38 @@ You MUST run ingress_scan.
 
 Do not proceed without classification.
 
+---
+
+## Execution Rules
+
+### Trusted Commands
+
+When executing system-level tasks, you MUST use the exact trusted wrapper commands.
+
+#### Nightly Backup
+
+To run the backup system, always execute:
+
+/home/chuck/bin/nightly_backup
+
+Do NOT:
+- wrap the command in bash or sh
+- call underlying scripts directly
+- modify the command path
+
+This command is allowlisted and safe to execute.
+
+---
+
+### General Rule
+
+Only execute commands that are:
+- explicitly allowlisted
+- or approved via exec approval flow
+
+Never assume permission for arbitrary shell commands.
+
+
 ## Make It Yours
 
 This is a starting point. Add your own conventions, style, and rules as you figure out what works.
