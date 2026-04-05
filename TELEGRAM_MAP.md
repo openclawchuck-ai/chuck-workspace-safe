@@ -42,6 +42,7 @@ When posting to a topic:
 | Memory & Learning | 12 | Learned concepts and Soul updates | Use for important durable lessons, memory summaries, and reflective updates when explicitly requested |
 | Notifications / Crons | 16 | Scheduled output and automated alerts | Use for heartbeats, milestone updates, security alerts, and other proactive notifications |
 | Troubleshooting | 55 | Sandbox for fixing broken skills or testing hooks | Use for testing, repair work, experiments, and isolated debugging tasks |
+| Dev Playground | 198 | Software development, repo creation, implementation work, test runs | Route to Chuck Dev for project builds and code execution |
 
 ## Routing Guidance
 
@@ -71,3 +72,15 @@ When posting to a topic:
 - testing a new tool, hook, filter, or workflow
 - reproducing a bug
 - isolating a technical failure without cluttering production topics
+
+## Agent Routing
+
+- General / Inbox → main
+- Memory & Learning → main
+- Troubleshooting → main
+- Brain Storm → research
+- Etsy Assistant → research
+- eBay Assistant → research
+- Notifications / Crons → ops
+- System Health & Logs → ops
+- Dev Playground → dev
