@@ -357,6 +357,36 @@ Rules:
 - Prefer Notifications / Crons for alerts, milestones, and security issues
 - Keep messages concise and safe (no secrets)
 
+## Telegram File Handling
+
+When a user uploads a file in Telegram:
+
+- Detect the presence of an attachment
+- Retrieve and download the file to the workspace
+- Store it under ~/repos/uploads or current project folder
+- Read and process the file contents as needed
+
+Supported file types:
+- .txt, .md, .csv, .json
+- .pdf (extract text if possible)
+- code files (.py, .js, etc.)
+
+Always confirm what was received and summarize contents.
+
+## Telegram Attachment Handling
+
+When a file is uploaded in Telegram:
+
+- Download the file into:
+  ~/repos/uploads/
+
+- Preserve original filename
+
+- Inform downstream agents of the file path
+
+Example:
+"The file has been saved to ~/repos/uploads/<filename>"
+
 ### Egress Security Filter
 
 Before sending any external output (Telegram, files, logs, reports):
