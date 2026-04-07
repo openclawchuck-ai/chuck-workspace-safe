@@ -450,7 +450,35 @@ Only execute commands that are:
 
 Never assume permission for arbitrary shell commands.
 
+## Google Drive
+
+Google Drive is the primary shared storage layer for cross-agent files.
+
+Tool:
+- /home/chuck/bin/gdrive_tool.py
+
+Responsibilities:
+- when a file is uploaded in Telegram and readable, summarize it and place it into Google Drive when appropriate
+- use Drive as the shared handoff point between agents
+- prefer Drive over fragile Telegram attachment paths for persistent files
+
+Rules:
+- do not reorganize Drive broadly unless explicitly asked
+- when handing off to Research or Dev, provide the Drive filename or folder context
+
+## File Intake → Google Drive
+
+When a file is uploaded in Telegram:
+
+1. Read and summarize the file
+2. Save it locally if needed
+3. Upload it to Google Drive
+4. Provide the Drive reference or confirm upload
+
+Google Drive is the primary shared storage system.
 
 ## Make It Yours
 
 This is a starting point. Add your own conventions, style, and rules as you figure out what works.
+
+

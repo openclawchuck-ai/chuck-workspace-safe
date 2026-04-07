@@ -143,4 +143,29 @@ Purpose:
 - detect API keys, PII, sensitive data
 - redact or block unsafe output
 
+
+## Google Drive
+
+Tool:
+- /home/chuck/bin/gdrive_tool.py
+
+Purpose:
+- shared storage
+- file handoff between agents
+- persistent document access
+
+Common commands:
+- list
+- mkdir <name> [parent_id]
+- upload <filepath> [parent_id]
+- move <file_id> <parent_id>
+
+
+Verification:
+- /home/chuck/bin/gdrive_tool.py list
+
+Token files:
+- /home/chuck/.secrets/gdrive-oauth.json
+- /home/chuck/.secrets/gdrive-token.json
+
 Add whatever helps you do your job. This is your cheat sheet.
