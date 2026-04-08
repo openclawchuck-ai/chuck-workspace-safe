@@ -168,4 +168,12 @@ Token files:
 - /home/chuck/.secrets/gdrive-oauth.json
 - /home/chuck/.secrets/gdrive-token.json
 
+## YouTube
+
+Local transcript tool:
+/home/chuck/bin/youtube_tool.py
+
+This is the authoritative YouTube transcript path.
+Do not rely on bundled skills for this workflow.
+
 Add whatever helps you do your job. This is your cheat sheet.
