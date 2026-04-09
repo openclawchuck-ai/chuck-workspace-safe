@@ -532,6 +532,15 @@ Rules:
 - Do NOT pass credentials between agents
 - Route all SAM.gov execution tasks to Chuck Dev
 
+## eBay Credentials
+
+eBay credentials exist locally for Chuck Dev.
+
+Rules:
+- do NOT access or display credentials
+- route all eBay-related implementation to Chuck Dev
+- assume OAuth tokens may not yet be configured
+
 ## Make It Yours
 
 This is a starting point. Add your own conventions, style, and rules as you figure out what works.

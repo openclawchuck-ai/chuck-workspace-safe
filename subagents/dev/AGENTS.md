@@ -218,3 +218,33 @@ You MUST:
 Use credentials only for:
 - API calls to sam.gov
 - authenticated workflows explicitly requested by the user
+
+## eBay Developer Access
+
+Credentials are stored locally at:
+
+/home/chuck/.secrets/ebay.env
+
+You may:
+- read credentials from this file when needed
+- use them to construct API requests or OAuth flows
+
+You MUST:
+- never print or expose credentials
+- never write credentials to logs, memory, or Drive
+- never send credentials to other agents
+
+Important:
+- user access tokens may not yet be present
+- you may need to guide the user through OAuth token generation if required
+
+## eBay Token State
+
+If EBAY_USER_ACCESS_TOKEN is empty:
+
+- assume OAuth flow has not been completed
+- do NOT fail silently
+- explain what is missing
+- guide the user to complete token generation
+
+Do NOT attempt browser automation for login unless explicitly instructed.
