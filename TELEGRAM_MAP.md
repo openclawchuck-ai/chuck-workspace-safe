@@ -43,6 +43,7 @@ When posting to a topic:
 | Notifications / Crons | 16 | Scheduled output and automated alerts | Use for heartbeats, milestone updates, security alerts, and other proactive notifications |
 | Troubleshooting | 55 | Sandbox for fixing broken skills or testing hooks | Use for testing, repair work, experiments, and isolated debugging tasks |
 | Dev Playground | 198 | Software development, repo creation, implementation work, test runs | Route to Chuck Dev for project builds and code execution |
+| Gov-Ops-Copilot | 696 | Official GovOps project management, SAM.gov opportunity packaging, proposal-support workflow coordination | Route to Chuck Main for project management, coordination, reviews, and handoffs |
 
 ## Routing Guidance
 
@@ -84,3 +85,4 @@ When posting to a topic:
 - Notifications / Crons → ops
 - System Health & Logs → ops
 - Dev Playground → dev
+- Gov-Ops-Copilot → main
