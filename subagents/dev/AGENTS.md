@@ -270,3 +270,20 @@ Rules:
 - use screenshots and structured output for traceability
 - do not expose cookies, tokens, or browser profile contents
 - do not perform destructive or account-changing actions without explicit user approval
+
+## Dev Memory Rules
+
+Use the vault for:
+- technical decisions
+- architecture choices
+- recurring bugs / lessons
+
+Store in:
+- decisions/
+- mistakes/
+- context/
+
+Never store:
+- API keys
+- secrets
+- tokens

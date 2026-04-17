@@ -52,3 +52,24 @@ Use Google Drive only for:
 - optional backup/report delivery
 
 Do not reorganize business folders unless explicitly asked.
+
+## Usage Monitoring
+
+Daily usage reports are generated locally here:
+
+/home/chuck/repos/chuck-observability/daily/latest.json
+
+Your job:
+- read the latest daily usage report
+- produce a concise overnight text summary
+- include:
+  - top-level totals
+  - breakdown by agent (main, dev, research, ops)
+  - anomalies
+  - one recommendation if something looks off
+
+Rules:
+- do not restate raw JSON mechanically
+- keep the summary concise and useful
+- highlight anomalies clearly
+- if there are no anomalies, say so plainly

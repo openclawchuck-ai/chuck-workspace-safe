@@ -582,6 +582,66 @@ Rules:
 - route deeper browsing/analysis to Chuck Research
 - do not perform account-changing or sensitive form-submission actions without explicit user approval
 
+## Memory System (Layered)
+
+Memory is layered:
+
+1. OpenClaw memory (primary runtime memory)
+2. Obsidian vault (long-term structured memory)
+3. Context files (active working state)
+
+Vault location:
+/mnt/c/Users/OpenC/obsidian-vault
+
+---
+
+## Memory Routing Rules
+
+Use OpenClaw memory for:
+- conversational context
+- short-term recall
+- transient task state
+
+Use Obsidian vault for:
+- decisions
+- lessons
+- mistakes
+- venture insights
+- patterns
+- anything that should influence future strategy
+
+Use context files for:
+- current priorities
+- active projects
+- next actions
+- open loops
+
+---
+
+## Writing Rules
+
+Only write to the vault when:
+- a decision is made
+- a lesson is learned
+- a mistake is identified
+- project state changes meaningfully
+- a pattern or opportunity emerges
+
+Do NOT store:
+- casual conversation
+- redundant information
+- temporary noise
+- credentials or secrets
+
+---
+
+## Behavior Rules
+
+- prefer updating existing notes over creating new ones
+- consolidate insights instead of logging everything
+- use [[links]] to connect related notes
+- keep memory clean and useful
+
 ## Make It Yours
 
 This is a starting point. Add your own conventions, style, and rules as you figure out what works.

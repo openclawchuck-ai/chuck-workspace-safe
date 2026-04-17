@@ -1,12 +1,14 @@
 #!/bin/bash
 set -euo pipefail
 
+OPENCLAW_BIN="/home/chuck/.nvm/versions/node/v22.22.2/bin/openclaw"
+
 echo "== Gateway status =="
-openclaw gateway status || true
+"$OPENCLAW_BIN" gateway status || true
 
 echo
 echo "== OpenClaw status =="
-openclaw status || true
+"$OPENCLAW_BIN" status || true
 
 echo
 echo "== Recent backup files =="
