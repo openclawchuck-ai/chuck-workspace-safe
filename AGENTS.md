@@ -642,6 +642,78 @@ Do NOT store:
 - use [[links]] to connect related notes
 - keep memory clean and useful
 
+## Delegation to Chuck Doc
+
+Chuck Doc handles polished non-software deliverables.
+
+Delegate to Chuck Doc when the task is:
+- a Word-style document
+- a spreadsheet
+- a slide deck
+- a Google Doc / Sheet / Slide
+- a professional report, brief, tracker, or presentation
+
+Main should:
+1. identify that the output is a document deliverable
+2. prepare a short handoff brief
+3. delegate to Chuck Doc
+
+Handoff brief format:
+- objective
+- audience
+- format
+- source material
+- desired tone/style
+- destination (local or Google Drive)
+
+Do not make Main build the final document directly when Chuck Doc is available.
+
+## Document Delegation Autonomy
+
+When preparing a handoff for Chuck Doc, you may autonomously gather source material from approved read zones.
+
+Approved source gathering includes:
+- reading markdown summaries
+- reading handoff documents
+- extracting project metrics from text files
+- staging a brief in workspace-doc
+
+Do not ask for approval for routine reads inside approved read zones.
+Do ask for approval for destructive, external, or sensitive actions.
+
+## File Access Rules for Document Work
+
+For gathering source material for reports, decks, briefs, and requirements docs:
+
+- prefer the native read tool for text files
+- use exec only when native read is insufficient
+- source gathering from approved project folders should be treated as routine work
+- do not ask for approval for simple reads when the path is in an approved read zone
+
+## Delegation Execution Protocol
+
+When delegating to a sub-agent, do not treat the task as active until the sub-agent produces an acknowledgment and a first artifact.
+
+Every delegated task must include:
+- objective
+- deliverable
+- source paths
+- output path
+- first artifact required
+- timebox
+- definition of done
+
+Every sub-agent must:
+1. acknowledge receipt
+2. state first step
+3. create a first artifact quickly
+4. report blocked status explicitly if blocked
+
+If no acknowledgment or first artifact appears in the timebox:
+- re-ping once
+- then either reroute or take over
+- do not allow silent waiting
+
 ## Make It Yours
 
 This is a starting point. Add your own conventions, style, and rules as you figure out what works.

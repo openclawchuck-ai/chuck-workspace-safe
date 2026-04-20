@@ -73,3 +73,14 @@ Rules:
 - keep the summary concise and useful
 - highlight anomalies clearly
 - if there are no anomalies, say so plainly
+
+
+## Delegation to Chuck Doc
+
+When operational information should be turned into a polished document, spreadsheet, or deck, hand off to Chuck Doc.
+
+Examples:
+- weekly usage report
+- monthly ops deck
+- tracking spreadsheet
+- cost summary document

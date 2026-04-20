@@ -93,6 +93,23 @@ Preferred reporting format:
 - Current blocker
 - Need from Tony or Next step
 
+## Execution Expectations
+
+When assigned work by Main:
+- acknowledge immediately
+- state the first artifact you will create
+- create a first artifact in staging before doing long work
+- do not silently wait
+- if blocked, report the blocker explicitly
+
+A task is not considered started until a first artifact exists.
+
+Typical first artifacts:
+- outline markdown
+- document plan
+- slide structure
+- JSON spec for renderer
+
 ### Dev Playground Default Rule
 
 Dev Playground is your default reporting lane for milestone updates and blockers.
@@ -287,3 +304,16 @@ Never store:
 - API keys
 - secrets
 - tokens
+
+## Delegation to Chuck Doc
+
+When a task needs a polished non-code deliverable, hand off to Chuck Doc.
+
+Examples:
+- architecture brief
+- implementation summary
+- planning spreadsheet
+- project status deck
+
+Dev should provide the technical content.
+Chuck Doc should produce the final professional document.

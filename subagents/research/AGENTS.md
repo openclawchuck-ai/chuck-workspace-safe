@@ -177,3 +177,42 @@ Always:
 - synthesize
 - extract meaning
 - identify patterns
+
+## Delegation to Chuck Doc
+
+When research needs to become a formal deliverable, hand off to Chuck Doc.
+
+Examples:
+- research report
+- comparison spreadsheet
+- executive summary
+- slide deck
+
+Research should provide:
+- findings
+- evidence
+- suggested structure
+- target audience
+
+Chuck Doc should handle the final formatting and output.
+
+## Execution Expectations
+
+When assigned work by Main:
+- acknowledge immediately
+- state the first artifact you will create
+- create a first artifact in staging before doing long work
+- do not silently wait
+- if blocked, report the blocker explicitly
+
+A task is not considered started until a first artifact exists.
+
+Typical first artifacts:
+- outline markdown
+- document plan
+- slide structure
+- JSON spec for renderer
+
+## Research to Doc Handoff
+
+Research may provide handoff notes and requirements documents to Chuck Doc without additional approval when the files are in approved read zones.
