@@ -1,0 +1,48 @@
+{
+  "format": "pptx",
+  "title": "eBay Mitchell Audit Deck",
+  "output_path": "/home/chuck/.openclaw/workspace-doc/outputs/ebay-mitchell-audit-deck.pptx",
+  "slides": [
+    {
+      "layout": "title",
+      "title": "eBay Mitchell Parts Audit",
+      "subtitle": "Inventory risk review for Tony's Mitchell fishing reel parts listings\nValidated discrepancy detection with a clear path to productization"
+    },
+    {
+      "title": "Business Problem and Why It Matters",
+      "bullets": [
+        "Tony has multiple eBay listings that can contain the same Mitchell fishing reel parts.",
+        "eBay does not reconcile shared inventory across those listings.",
+        "That creates oversell risk when the same part appears available in more than one listing.",
+        "The audit is valuable because it turns hidden cross-listing inventory conflicts into a reviewable operational workflow."
+      ]
+    },
+    {
+      "title": "What the Audit Already Accomplished",
+      "bullets": [
+        "Tony explicitly confirmed that the audit found real discrepancies.",
+        "He said it likely prevented selling a part that was actually out of stock.",
+        "This is not a speculative prototype story, the work has already delivered operational value.",
+        "The project has effectively validated the need for a repeatable internal inventory risk capability."
+      ]
+    },
+    {
+      "title": "Proof Metrics from Current Runs",
+      "bullets": [
+        "Initial live run: 2 listings scanned, 111 part rows, 12 overlapping parts, 25 mismatch rows, 37 warnings.",
+        "Larger batch run: 15 listings scanned, 998 part rows, 61 overlapping parts, 135 mismatch rows, 553 warnings.",
+        "Summary notes indicate some sample output used mock data plus approved quantity-state rules.",
+        "Live browser extraction also faced challenge-gating in the current environment, but the discrepancy signal was still useful and business value was validated."
+      ]
+    },
+    {
+      "title": "Next Phase: Mitchell Inventory Risk Console",
+      "bullets": [
+        "Productize the audit into a desktop-friendly internal dashboard for Tony.",
+        "Core views should include Audit Overview, Parts Needing Attention, Listing View, listing detail, and part-level drilldown.",
+        "The system should preserve official run history, separate official runs from test or dev output, and support a monthly default cadence.",
+        "This phase should improve reviewability, prioritization, reporting, and operational flow, without making automatic eBay edits."
+      ]
+    }
+  ]
+}

@@ -5,9 +5,11 @@ SRC_MAIN="$HOME/.openclaw/workspace"
 SRC_DEV="$HOME/.openclaw/workspace-dev"
 SRC_RESEARCH="$HOME/.openclaw/workspace-research"
 SRC_OPS="$HOME/.openclaw/workspace-ops"
+SRC_DOC="$HOME/.openclaw/workspace-doc"
 DST="$HOME/repos/chuck-workspace-safe"
+TOOLING_DST="$DST/tooling"
 
-mkdir -p "$DST/subagents/dev" "$DST/subagents/research" "$DST/subagents/ops"
+mkdir -p "$DST/subagents/dev" "$DST/subagents/research" "$DST/subagents/ops" "$DST/subagents/doc" "$TOOLING_DST"
 
 rsync -av \
   "$SRC_MAIN/AGENTS.md" \
@@ -42,6 +44,39 @@ sync_subagent_md() {
 sync_subagent_md "$SRC_DEV" "$DST/subagents/dev"
 sync_subagent_md "$SRC_RESEARCH" "$DST/subagents/research"
 sync_subagent_md "$SRC_OPS" "$DST/subagents/ops"
+sync_subagent_md "$SRC_DOC" "$DST/subagents/doc"
+
+mkdir -p "$DST/subagents/doc/handoffs" "$DST/subagents/doc/staging"
+if [[ -d "$SRC_DOC/handoffs" ]]; then
+  rsync -av --include='*/' --include='*.md' --exclude='*' "$SRC_DOC/handoffs/" "$DST/subagents/doc/handoffs/"
+fi
+if [[ -d "$SRC_DOC/staging" ]]; then
+  rsync -av --include='*/' --include='*.md' --include='*.json' --exclude='*' "$SRC_DOC/staging/" "$DST/subagents/doc/staging/"
+fi
+
+snapshot_venv() {
+  local name="$1"
+  local venv_dir="$HOME/.venvs/$name"
+  local out_dir="$TOOLING_DST/$name"
+
+  if [[ ! -d "$venv_dir" ]]; then
+    return
+  fi
+
+  mkdir -p "$out_dir"
+
+  if [[ -f "$venv_dir/pyvenv.cfg" ]]; then
+    rsync -av "$venv_dir/pyvenv.cfg" "$out_dir/"
+  fi
+
+  if [[ -x "$venv_dir/bin/python3" ]]; then
+    "$venv_dir/bin/python3" -m pip freeze > "$out_dir/requirements.txt" || true
+  fi
+}
+
+snapshot_venv "browser-tool"
+snapshot_venv "chuck-doc"
+snapshot_venv "gdrive"
 
 cd "$DST"
 git add .

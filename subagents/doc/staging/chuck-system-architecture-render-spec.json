@@ -1,0 +1,51 @@
+{
+  "format": "docx",
+  "title": "Chuck System Architecture Overview",
+  "output_path": "/home/chuck/.openclaw/workspace-doc/outputs/chuck-system-architecture-overview.docx",
+  "sections": [
+    {
+      "heading": "Document Format Choice",
+      "body": "Chosen format: Word document. This medium is the best fit for a detailed, organized, understandable architecture deliverable because it can combine a structured diagram section, layered explanation, operational notes, and clearly marked assumptions or clarification gaps without compressing the content into slide-sized fragments."
+    },
+    {
+      "heading": "Executive Summary",
+      "body": "Chuck runs as an OpenClaw-based assistant stack on a Linux environment under WSL2, with a local gateway, multiple agents, controlled tool access, session routing, and integrations for Telegram and Google Workspace publishing. The document will explain the architecture in layers: host and runtime, agent roles, tools and skills, workspace and data flows, communications channels, automation behavior, and supporting scripts or environments."
+    },
+    {
+      "heading": "Host and Hardware Context",
+      "body": "Current runtime evidence shows the system operating on Linux 6.6.87.2-microsoft-standard-WSL2, x64, with Node 22.22.2. The active OpenClaw gateway identifies itself as host A5 on a local loopback WebSocket endpoint and is installed as a systemd-managed gateway service that is enabled and running. The final deliverable should show the host boundary, the WSL2 runtime layer, the local dashboard, and the distinction between local execution and external service connections. Any underlying physical machine details beyond this runtime view should be confirmed with Chuck Main rather than assumed."
+    },
+    {
+      "heading": "OpenClaw Runtime Layer",
+      "body": "OpenClaw is the core runtime and orchestration layer. It provides the gateway service, dashboard access, session management, tool execution, channel routing, memory plugins, task tracking, and heartbeat scheduling. Current status indicates a local gateway reachable at loopback, a running gateway service, five agents, forty-one sessions, one active task, and a default model family centered on GPT-5.4. Memory infrastructure is present and ready, including vector and full-text search support, although current memory files are reported as zero."
+    },
+    {
+      "heading": "Agent Architecture",
+      "body": "The architecture includes a main agent plus specialized agents such as doc, dev, research, and ops. Chuck Doc is the document-focused agent responsible for creating polished Word, Excel, PowerPoint, and Google Workspace deliverables. The handoff model routes objectives, audience, source materials, tone, and destination from Main into Doc, which then produces a staged first artifact, structured content, rendered output, and optional publication. Heartbeat behavior differs by agent, with the main agent on a sixty-minute heartbeat and doc currently disabled."
+    },
+    {
+      "heading": "Skills and Tools Layer",
+      "body": "OpenClaw exposes specialized skills for areas such as GitHub, Google Workspace, weather, health checks, taskflow, and document-related operations. Chuck Doc relies especially on local file tools for reading, writing, and editing workspace artifacts, shell execution for rendering and status checks, a local Python-based render_document.py script for generating .docx and .pptx files, and Google Workspace tooling through gog for Docs, Sheets, and Slides publication workflows. The final diagram should distinguish between first-class file tools, shell execution, skill guidance, and renderer scripts."
+    },
+    {
+      "heading": "Workspace, Data, and Document Flow",
+      "body": "The working architecture includes a document workspace with staging, outputs, handoffs, scripts, and persistent context files. Key directories and files include staging for in-progress artifacts, outputs for finished deliverables, handoffs for inbound briefs, scripts for rendering and publication, and context files such as AGENTS.md, SOUL.md, USER.md, IDENTITY.md, TOOLS.md, and HEARTBEAT.md. The document flow for Chuck Doc is: receive brief, create first artifact in staging, generate a JSON render specification, render through the local script, verify output, and optionally publish to Google Workspace."
+    },
+    {
+      "heading": "Communications and Integrations",
+      "body": "The runtime supports direct webchat sessions and Telegram connectivity. Status confirms Telegram is enabled and healthy with one configured account, and runtime context indicates session routing for direct sessions, Telegram group sessions, and cron-originated sessions. Google Workspace integration is available through gog for Docs, Sheets, and Slides. The final deliverable should show a clear separation between internal OpenClaw routing and external communication or publication channels. Secrets, tokens, and system paths should not be exposed in the final user-facing architecture document."
+    },
+    {
+      "heading": "Automation, Scheduling, and Tasking",
+      "body": "Current runtime evidence shows cron-originated sessions in the environment, tracked tasks, and heartbeat scheduling. The main agent heartbeat is configured at sixty minutes, while doc, dev, ops, and research heartbeats are currently disabled. The system also tracks running tasks, queued work, issues, and warnings. The architecture diagram should show how recurring wakes, cron sessions, and active delegated tasks feed work into the appropriate agent contexts. Specific cron purposes and schedules should be confirmed with Chuck Main rather than inferred."
+    },
+    {
+      "heading": "Supporting Environments and Services",
+      "body": "The render_document.py script runs from a dedicated Python virtual environment and generates Office files locally. A publish_google.sh helper script provides optional publishing to Google Docs, Sheets, or Slides. The OpenClaw dashboard is locally hosted, the gateway runs as a service, and Tailscale is currently off. The final document should also note relevant operational and security context surfaced by status, including local-only gateway assumptions, reverse proxy trust considerations, and the current broad exec trust posture."
+    },
+    {
+      "heading": "Clarifications to Confirm with Chuck Main",
+      "body": "Before finalizing the architecture narrative, confirm the following rather than guessing: the underlying physical host or hardware description Tony should see, whether any backups or sync flows exist and how they work, the purpose of the visible cron sessions, whether there are additional supporting services outside this workspace, whether Google Docs or Telegram are used in specific production flows, and whether any sub-agent relationships or external repos should be drawn explicitly."
+    }
+  ]
+}

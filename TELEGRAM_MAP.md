@@ -44,6 +44,7 @@ When posting to a topic:
 | Troubleshooting | 55 | Sandbox for fixing broken skills or testing hooks | Use for testing, repair work, experiments, and isolated debugging tasks |
 | Dev Playground | 198 | Software development, repo creation, implementation work, test runs | Route to Chuck Dev for project builds and code execution |
 | Gov-Ops-Copilot | 696 | Official GovOps project management, SAM.gov opportunity packaging, proposal-support workflow coordination | Route to Chuck Main for project management, coordination, reviews, and handoffs |
+| Doc Optimization | 1216 | Coaching Chuck Doc on document quality, presentation style, deck polish, and output direction | Route to Chuck Doc for document coaching, PowerPoint quality improvement, and style-direction work |
 
 ## Routing Guidance
 
@@ -86,3 +87,4 @@ When posting to a topic:
 - System Health & Logs → ops
 - Dev Playground → dev
 - Gov-Ops-Copilot → main
+- Doc Optimization → doc

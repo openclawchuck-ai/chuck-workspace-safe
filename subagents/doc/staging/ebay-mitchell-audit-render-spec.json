@@ -1,0 +1,43 @@
+{
+  "format": "docx",
+  "title": "eBay Mitchell Audit Requirements Overview",
+  "output_path": "/home/chuck/.openclaw/workspace-doc/outputs/ebay-mitchell-audit-requirements-overview.docx",
+  "sections": [
+    {
+      "heading": "Executive Summary",
+      "body": "The eBay Mitchell audit project addresses a real inventory control problem in Tony's eBay operation for Mitchell fishing reel parts. The work has already demonstrated operational value by identifying discrepancies across listings that share the same parts, reducing the risk of overselling items that are actually out of stock. This document frames the next phase as a practical internal product capability, centered on a desktop-friendly dashboard and official audit workflow."
+    },
+    {
+      "heading": "Business Problem and Validated Value",
+      "body": "Tony has multiple eBay listings that may contain the same Mitchell fishing reel parts. eBay does not reconcile shared inventory across those listings, which creates a risk that the same part can appear available in more than one place when actual stock is insufficient. Tony explicitly confirmed that the audit found real discrepancies and likely prevented the sale of a part that was actually out of stock. That confirmation establishes that the project has already produced meaningful business value."
+    },
+    {
+      "heading": "Current Audit Proof and Results",
+      "body": "Initial live run metrics showed 2 listings scanned, 111 total part rows extracted, 12 overlapping parts, 25 mismatch rows, and 37 warnings. A larger batch run showed 15 listings scanned, 998 total part rows extracted, 61 overlapping parts, 135 mismatch rows, and 553 warnings. Summary notes also stated that some sample output used mock data plus approved quantity-state rules, and that live browser extraction encountered challenge-gating issues in the current environment. Even with those limitations, the discrepancy detection was useful and the business value was validated."
+    },
+    {
+      "heading": "Product Framing",
+      "body": "The next phase should productize the current audit win into a serious internal operating capability rather than a one-off review process. The recommended direction is a desktop-friendly internal dashboard, with candidate working names including Mitchell Inventory Risk Console, eBay Mitchell Audit Dashboard, and Mitchell Parts Audit Console. The product should help Tony review the latest official audit run, inspect parts needing attention, identify overlap and mismatch risk, review issues by listing and by part, preserve official run history, and support a monthly default cadence with future refresh flexibility."
+    },
+    {
+      "heading": "Primary User and Use Case",
+      "body": "The primary user is Tony, using his computer to review audit output with low friction and make inventory-risk decisions. The core use case is to open the latest official run, identify actionable part and listing discrepancies, prioritize the most important issues, and reduce the chance of overselling due to unresolved shared-inventory conflicts. This phase is for review, prioritization, and reporting, not automated eBay edits."
+    },
+    {
+      "heading": "Core Requirements",
+      "body": "The dashboard must be desktop-friendly and easy to review from Tony's computer. It should support a monthly default cadence while allowing future flexibility for adjusted refresh timing. Official runs must be clearly separated from test and development runs. The system should improve reviewability, prioritization, reporting, and operational workflow. Automatic eBay edits are explicitly out of scope for this phase."
+    },
+    {
+      "heading": "Dashboard Modules and Views",
+      "body": "The product should include an Audit Overview screen, a Parts Needing Attention view, a Listing view, listing detail behavior, and part-level drilldown for discrepancy review. The Audit Overview should show the latest official run timestamp, current configured cadence, run status, total listings scanned, total part rows extracted, overlapping part count, mismatch count, warning count, and high-priority issue count. The Parts Needing Attention view should include part number, description, number of listings containing the part, mismatch flag, warning flag, priority level, affected listings, and filters or sorting for actionable risk. The Listing view should include listing title, listing ID, listing URL, model family, extracted part count, overlap count, warnings, and last audit timestamp. Listing detail should show all extracted parts in the listing, quantity states, and which parts overlap across other listings."
+    },
+    {
+      "heading": "Official Run Model and Refresh Cadence",
+      "body": "Official audit runs should be preserved as reviewable records, clearly distinguished from test and development output. The latest official run should be easy to access and compare against future runs. The default refresh cadence should be monthly, while preserving the option to adjust cadence later as the workflow matures. This model supports stable operational review while keeping room for future flexibility."
+    },
+    {
+      "heading": "Future Work and Next Phase",
+      "body": "The immediate next phase is to turn the current audit capability into a stable internal dashboard that supports review, prioritization, and historical run tracking. Over time, the product can improve extraction reliability, reduce challenge-gating friction, strengthen reporting, and expand refresh controls. The strongest near-term goal is to preserve the validated value already demonstrated by the audit and make it easier for Tony to act on discrepancy findings consistently."
+    }
+  ]
+}
