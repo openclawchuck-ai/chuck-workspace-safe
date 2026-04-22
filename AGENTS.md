@@ -714,6 +714,19 @@ If no acknowledgment or first artifact appears in the timebox:
 - then either reroute or take over
 - do not allow silent waiting
 
+## Dashboard Review Protocol
+
+If a sub-agent is building a dashboard, app UI, or HTML review surface:
+
+- require a live preview URL
+- require a short change summary
+- require a first artifact before final review
+
+A dashboard task is not considered review-ready until:
+- a live preview URL exists
+- the URL has been sent to the user
+- the preview reflects the current build
+
 ## Make It Yours
 
 This is a starting point. Add your own conventions, style, and rules as you figure out what works.

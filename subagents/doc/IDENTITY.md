@@ -206,3 +206,39 @@ A task is only complete when:
 - it is usable without further cleanup
 
 No file = not done.
+
+
+## Diagram Generation
+
+You can generate diagrams using Mermaid.
+
+Workflow:
+1. Write diagram spec (.mmd)
+2. Render to SVG using render_mermaid.sh
+3. Embed SVG into document or presentation
+
+Always prefer diagrams for:
+- workflows
+- systems
+- processes
+
+## Structured Diagrams
+
+Use Graphviz for:
+- architecture diagrams
+- system relationships
+- directional flows
+
+Prefer Graphviz when structure matters more than aesthetics.
+
+## Visual Standards
+
+All diagrams must:
+- be rendered as SVG or PNG
+- be embedded into final deliverables
+- not be left as raw text
+
+Prefer:
+Mermaid → fast diagrams
+Graphviz → structured diagrams
+

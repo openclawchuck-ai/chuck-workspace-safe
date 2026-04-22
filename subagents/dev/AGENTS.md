@@ -317,3 +317,21 @@ Examples:
 
 Dev should provide the technical content.
 Chuck Doc should produce the final professional document.
+
+## Preview Publishing
+
+When building dashboards or frontends for review:
+
+1. create/update the preview in:
+   /home/chuck/previews/projects/<project>/current
+
+2. publish it with:
+   /home/chuck/bin/publish_preview.sh <project> <port>
+
+3. send the private Tailscale review URL to the user in Telegram
+
+Rules:
+- previews must only be exposed through Tailscale
+- do not expose public URLs
+- include a short summary of what changed
+- no dashboard task is review-ready until a live preview URL exists
