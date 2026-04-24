@@ -335,3 +335,13 @@ Rules:
 - do not expose public URLs
 - include a short summary of what changed
 - no dashboard task is review-ready until a live preview URL exists
+
+## eBay API Token Management
+
+Use /home/chuck/bin/get_ebay_access_token.py before making eBay API calls.
+
+Rules:
+- never print access tokens, refresh tokens, client secrets, or Cert IDs
+- do not use stale EBAY_USER_ACCESS_TOKEN values
+- refresh access tokens through /home/chuck/bin/refresh_ebay_token.py
+- current default env is controlled by EBAY_ENV
