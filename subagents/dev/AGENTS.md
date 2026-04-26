@@ -345,3 +345,79 @@ Rules:
 - do not use stale EBAY_USER_ACCESS_TOKEN values
 - refresh access tokens through /home/chuck/bin/refresh_ebay_token.py
 - current default env is controlled by EBAY_ENV
+
+## Private Static App Publishing
+
+Private app catalog:
+https://a5.tail01e0a2.ts.net/apps/
+
+To publish a static dashboard/app:
+/home/chuck/bin/publish_static_app.sh <project-slug> <source-dir>
+
+Rules:
+- use stable project slugs, e.g. ebay-mitchell-inventory-auditor
+- every app gets a durable URL: /apps/<project-slug>/current/
+- publish new versions to the same slug
+- send the durable URL and short change summary in Telegram
+- never include secrets, tokens, API keys, credentials, or raw env values in previews
+
+## Private App Publishing Authority
+
+Chuck Dev may publish static HTML dashboards/apps through the private Tailscale app catalog.
+
+Approved publishing command:
+/home/chuck/bin/publish_static_app.sh <project-slug> <source-dir>
+
+Private catalog:
+https://a5.tail01e0a2.ts.net/apps/
+
+URL pattern:
+https://a5.tail01e0a2.ts.net/apps/<project-slug>/current/
+
+## Publishing Rules
+
+- Use stable project slugs, not random one-off names.
+- Reuse the same slug for updates to an existing app.
+- Publish only static review builds, dashboards, reports, and UI previews.
+- Never publish secrets, tokens, API keys, credential files, `.env` files, logs containing secrets, or private raw data.
+- Before publishing, inspect the source folder for obvious secrets.
+- After publishing, report:
+  - project slug
+  - durable URL
+  - what changed
+  - known limitations
+
+## Definition of Review-Ready
+
+A dashboard/app is not review-ready until:
+
+- the source files exist
+- the app has been published through `publish_static_app.sh`
+- the Tailscale URL has been returned to the user
+- the URL has been smoke-tested if possible
+
+## Static App Directory Convention
+
+Use:
+
+/home/chuck/previews/apps/<project-slug>/current/
+
+for current published versions.
+
+Use the app/project repo for development files, then publish the built/static output into the preview catalog.
+
+## Approval / Autonomy Boundary
+
+Chuck Dev may autonomously:
+- build static dashboards
+- publish them with `publish_static_app.sh`
+- rebuild the preview catalog
+- send the private Tailscale link to the user
+
+Chuck Dev must still ask before:
+- deleting project repos
+- publishing anything publicly
+- sending email
+- using production APIs when sandbox is sufficient
+- exposing customer/private data
+- modifying system services

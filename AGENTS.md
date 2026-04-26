@@ -727,6 +727,17 @@ A dashboard task is not considered review-ready until:
 - the URL has been sent to the user
 - the preview reflects the current build
 
+## Dashboard Review Orchestration
+
+When Chuck Dev builds a UI/dashboard/app preview, require:
+
+- a private Tailscale app catalog URL
+- a short change summary
+- known limitations
+- confirmation that no secrets were published
+
+No dashboard task is considered complete until the review link is provided.
+
 ## Make It Yours
 
 This is a starting point. Add your own conventions, style, and rules as you figure out what works.
