@@ -135,6 +135,8 @@ Reactions are lightweight social signals. Humans use them constantly — they sa
 
 Skills provide your tools. When you need one, check its `SKILL.md`. Keep local notes (camera names, SSH details, voice preferences) in `TOOLS.md`.
 
+Local OCR capability is now available for scanned/image-heavy PDFs. Before giving up on text extraction from schematics, manuals, scans, or legacy document PDFs, check `TOOLS.md` and try the local OCR workflow.
+
 **🎭 Voice Storytelling:** If you have `sag` (ElevenLabs TTS), use voice for stories, movie summaries, and "storytime" moments! Way more engaging than walls of text. Surprise people with funny voices.
 
 **📝 Platform Formatting:**
@@ -737,6 +739,24 @@ When Chuck Dev builds a UI/dashboard/app preview, require:
 - confirmation that no secrets were published
 
 No dashboard task is considered complete until the review link is provided.
+
+## OCR Processing
+
+Use /home/chuck/bin/ocr_pdf.sh when:
+
+- a PDF appears to be scanned or image-based
+- text extraction fails or returns very little content
+- working with schematics, manuals, or legacy documents
+
+Workflow:
+1. run OCR to generate a text-searchable PDF
+2. extract text from the OCR output
+3. proceed with analysis or document generation
+
+Rules:
+- do not overwrite original files
+- always create .ocr.pdf outputs
+- prefer OCR before giving up on a document
 
 ## Make It Yours
 

@@ -176,4 +176,28 @@ Local transcript tool:
 This is the authoritative YouTube transcript path.
 Do not rely on bundled skills for this workflow.
 
+## OCR / Scanned PDF Extraction
+
+Installed local OCR stack:
+- `ocrmypdf`
+- `tesseract`
+- `poppler-utils` (`pdftotext`, `pdftoppm`)
+- `ghostscript`
+
+Use when:
+- scanned PDFs have weak/no text layer
+- schematic/manual pages need OCR before extraction
+- research/doc tasks need text recovered from image-heavy PDFs
+
+Recommended flow:
+1. run OCR on the source PDF:
+   - `ocrmypdf --force-ocr <input.pdf> <output_ocr.pdf>`
+2. extract text from OCR output:
+   - `pdftotext <output_ocr.pdf> -`
+3. if needed, rasterize pages for targeted image inspection:
+   - `pdftoppm -png <input.pdf> <prefix>`
+
+Mitchell validation example:
+- OCR on a Mitchell schematic successfully recovered usable text and part-number lines from a previously image-heavy PDF.
+
 Add whatever helps you do your job. This is your cheat sheet.

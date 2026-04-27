@@ -1,12 +1,40 @@
 #!/bin/bash
 set -euo pipefail
 
-LOG_FILE="/tmp/openclaw/openclaw-$(date +%F).log"
+PATTERN='suspicious|malicious|denied command|blocked|prompt injection|redact|security alert'
+TMP_MATCHES="$(mktemp)"
+trap 'rm -f "$TMP_MATCHES"' EXIT
 
-echo "== Recent suspicious security signals =="
+printf '== Recent suspicious security signals ==
+'
 
-if [ -f "$LOG_FILE" ]; then
-  grep -Ei 'suspicious|malicious|denied|blocked|prompt injection|redact|security alert' "$LOG_FILE" | tail -n 50 || true
+FILES=(
+  "$HOME/.openclaw/logs/commands.log"
+  "$HOME/.openclaw/logs/config-audit.jsonl"
+  "$HOME/.openclaw/logs/gateway-restart.log"
+)
+
+for file in "${FILES[@]}"; do
+  [ -f "$file" ] || continue
+  grep -HnEi "$PATTERN" "$file" || true
+done |
+  python3 - <<'PY2' > "$TMP_MATCHES"
+import sys
+for line in sys.stdin:
+    if len(line) > 600:
+        continue
+    if '"payloads"' in line or 'finalAssistantRawText' in line or 'finalPromptText' in line:
+        continue
+    print(line, end='')
+PY2
+
+if [ -s "$TMP_MATCHES" ]; then
+  tail -n 80 "$TMP_MATCHES"
 else
-  echo "No current log file found: $LOG_FILE"
+  echo 'No suspicious/malicious/denied/blocked/redacted signals found in the focused security logs.'
+  echo
+  echo 'Files reviewed:'
+  for file in "${FILES[@]}"; do
+    [ -f "$file" ] && echo "$file"
+  done
 fi

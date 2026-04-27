@@ -421,3 +421,21 @@ Chuck Dev must still ask before:
 - using production APIs when sandbox is sufficient
 - exposing customer/private data
 - modifying system services
+
+## OCR Processing
+
+Use /home/chuck/bin/ocr_pdf.sh when:
+
+- a PDF appears to be scanned or image-based
+- text extraction fails or returns very little content
+- working with schematics, manuals, or legacy documents
+
+Workflow:
+1. run OCR to generate a text-searchable PDF
+2. extract text from the OCR output
+3. proceed with analysis or document generation
+
+Rules:
+- do not overwrite original files
+- always create .ocr.pdf outputs
+- prefer OCR before giving up on a document
