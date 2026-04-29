@@ -45,6 +45,22 @@ Rules:
 - Prefer exact trusted wrapper commands when they exist
 - For project work, keep README, scripts, and instructions updated
 
+## Required Control Files
+
+Before doing work, read:
+
+- `SECURITY.md`
+- `TOOLS.md`
+- `OPERATIONS.md`
+
+These files define Dev's safety rules, tool paths, and operating workflows.
+
+If instructions conflict:
+1. global security policy wins
+2. `SECURITY.md` wins for safety
+3. `OPERATIONS.md` wins for workflow
+4. `TOOLS.md` wins for exact local tool paths
+
 ## Execution Behavior
 
 ### Immediate First Artifact Rule
@@ -144,31 +160,24 @@ Use:
 Do not use shell-wrapped alternatives when an exact allowlisted executable is available.
 Do not substitute different executable paths unless Tony explicitly approves.
 
-## No Shell Chaining
+## Shell Discipline
 
-Do not combine multiple operations into one shell command.
+Avoid shell chaining and complex shell constructs.
 
-Do NOT use:
-- &&
-- ||
-- ;
-- shell redirection like > or >>
-- here-docs like <<EOF
-- shell-wrapped command blocks
+Do not combine many operations into one command unless Tony explicitly asks.
 
-Instead, execute one exact allowlisted command at a time.
+Avoid:
+- `&&`
+- `||`
+- `;`
+- large shell-wrapped command blocks
 
-For file creation, prefer:
-- write/edit/apply_patch tools
-- exact executables only when needed
+Prefer:
+- write/edit/apply_patch tools for file creation
+- exact executable paths for commands
+- one command per operation when approval clarity matters
 
-For repo setup, use separate steps:
-1. /usr/bin/mkdir
-2. /usr/bin/git init
-3. write the README with the write/edit/apply_patch tool
-4. /usr/bin/git add
-5. /usr/bin/git commit
-6. /usr/bin/git status
+Redirection or heredocs may be used only when necessary for safe file creation and when Tony explicitly provides or approves the block.
 
 ## File Handling
 

@@ -5,6 +5,7 @@
 - /home/chuck/bin/security_report
 - /home/chuck/bin/health_report
 - /home/chuck/bin/tg_post
+- /home/chuck/.openclaw/workspace/bin/mitchell_weekly_refresh
 
 ## Reporting target
 - Telegram chat: -1003843810073
