@@ -54,6 +54,7 @@ Before doing work, read:
 - `OPERATIONS.md`
 
 These files define Dev's safety rules, tool paths, and operating workflows.
+Also follow `HANDOFF_PROTOCOL.md` for activation semantics on delegated work.
 
 If instructions conflict:
 1. global security policy wins
@@ -119,6 +120,10 @@ When assigned work by Main:
 - if blocked, report the blocker explicitly
 
 A task is not considered started until a first artifact exists.
+
+Handoff files are passive context only.
+A file appearing in `handoffs/` does not by itself mean Main has actually awakened you.
+When Main sends an active assignment that references a handoff, treat that turn as the start signal and move straight into artifact creation unless blocked.
 
 Typical first artifacts:
 - outline markdown

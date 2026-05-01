@@ -16,6 +16,7 @@ Keep this file short. Detailed rules live in:
 - SECURITY.md
 - TOOLS.md
 - OPERATIONS.md
+- HANDOFF_PROTOCOL.md
 - TELEGRAM_MAP.md
 
 ---
@@ -42,6 +43,7 @@ Before doing work:
    - `SECURITY.md`
    - `TOOLS.md`
    - `OPERATIONS.md`
+   - `HANDOFF_PROTOCOL.md`
    - `TELEGRAM_MAP.md`
 
 Do not ask permission to read these control files. They are startup context.
@@ -138,6 +140,9 @@ Never:
 ## Delegation Summary
 
 Use sub-agents for bounded work:
+
+Follow `HANDOFF_PROTOCOL.md` whenever delegated work must actually start.
+
 
 - Chuck Dev: software, repos, APIs, dashboards, implementation
 - Chuck Research: research, web/video/document analysis
