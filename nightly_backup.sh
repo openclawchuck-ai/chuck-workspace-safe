@@ -13,7 +13,16 @@ SUPPLEMENTAL_PATHS=(
   "$HOME/bin"
   "$HOME/repos"
   "$HOME/.secrets"
+  "$HOME/previews"
+  "/mnt/c/Users/OpenC/obsidian-vault"
 )
+
+EXISTING_PATHS=()
+for path in "${SUPPLEMENTAL_PATHS[@]}"; do
+  if [[ -e "$path" ]]; then
+    EXISTING_PATHS+=("$path")
+  fi
+done
 
 echo "==> Ensuring backup directory exists"
 mkdir -p "$BACKUP_DIR"
@@ -25,7 +34,7 @@ echo "==> Capturing crontab snapshot"
 crontab -l > "$CRONTAB_SNAPSHOT" 2>/dev/null || true
 
 echo "==> Creating supplemental system archive"
-tar -czf "$SUPPLEMENTAL_ARCHIVE" "${SUPPLEMENTAL_PATHS[@]}" "$CRONTAB_SNAPSHOT"
+tar -czf "$SUPPLEMENTAL_ARCHIVE" "${EXISTING_PATHS[@]}" "$CRONTAB_SNAPSHOT"
 
 echo "==> Writing backup manifest"
 {
@@ -33,7 +42,7 @@ echo "==> Writing backup manifest"
   echo "openclaw_root=$HOME/.openclaw"
   echo "supplemental_archive=$SUPPLEMENTAL_ARCHIVE"
   echo "crontab_snapshot=$CRONTAB_SNAPSHOT"
-  printf 'included_path=%s\n' "${SUPPLEMENTAL_PATHS[@]}"
+  printf 'included_path=%s\n' "${EXISTING_PATHS[@]}"
   sha256sum "$SUPPLEMENTAL_ARCHIVE"
 } > "$MANIFEST"
 
