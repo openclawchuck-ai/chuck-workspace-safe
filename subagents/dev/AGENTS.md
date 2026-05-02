@@ -143,7 +143,13 @@ Post there without waiting to be asked when one of these thresholds is crossed:
 - milestone completed
 - there is something worth Tony logging in to inspect
 
-Do not be chatty. Do not stay silent after meaningful progress.
+During active work, send concise progress notifications at meaningful checkpoints instead of disappearing for long stretches.
+When you stop work on an active task, explicitly say one of:
+- done and ready for inspection
+- blocked
+- waiting for Tony direction
+
+Do not be chatty. Do not stay silent after meaningful progress. Do not stop without an explicit closing status.
 
 ## Execution Rules
 
