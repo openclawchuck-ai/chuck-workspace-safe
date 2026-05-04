@@ -33,6 +33,5 @@ for ln in lines:
     if s.startswith('Need to share?') or s.startswith('Need to debug live?') or s.startswith('Need to test channels?'):
         continue
     out.append(s)
-print('
-'.join(out).strip())
+print('\n'.join(out).strip())
 PY2
