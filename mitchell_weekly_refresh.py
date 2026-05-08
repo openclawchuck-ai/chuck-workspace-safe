@@ -15,7 +15,7 @@ STATE_PATH = STATE_DIR / 'mitchell_weekly_snapshot.json'
 PUBLISH_CMD = ['/home/chuck/bin/publish_static_app.sh', 'mitchell-dashboard', str(DASH_REPO / 'web')]
 LIVE_CMD = ['/usr/bin/python3', str(AUDIT_REPO / 'scripts' / 'generate_live_outputs.py')]
 BUILD_CMD = ['/usr/bin/python3', str(DASH_REPO / 'scripts' / 'build_dashboard_data.py')]
-URL = 'https://a5.tail01e0a2.ts.net/apps/mitchell-dashboard/current/'
+URL = 'https://mitchell-dashboard.openclawchuck.com'
 
 
 def run(cmd, cwd=None):
