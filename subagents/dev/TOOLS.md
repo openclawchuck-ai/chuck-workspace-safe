@@ -207,3 +207,27 @@ Security rules live in:
 Global policy:
 
 `/home/chuck/repos/chuck-workspace-safe/SECURITY_POLICY.md`
+
+
+## Shopify - Mitchell Reel Parts
+
+Store:
+mitchell-reel-parts.myshopify.com
+
+Production app:
+chuck-mitchell-prod
+
+Credentials:
+Loaded through ~/.config/openclaw/openclaw.env
+
+Environment variables:
+- SHOPIFY_STORE
+- SHOPIFY_CLIENT_ID
+- SHOPIFY_CLIENT_SECRET
+- SHOPIFY_ADMIN_TOKEN
+
+Operational guidance:
+- Use Admin API for catalog, products, collections, orders, themes, and inventory.
+- Never print tokens or secrets into chat, logs, commits, markdown, or memory systems.
+- Treat Shopify credentials as production credentials.
+- Before destructive operations, summarize intended changes first.
