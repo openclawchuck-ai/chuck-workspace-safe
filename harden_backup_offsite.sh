@@ -2,6 +2,8 @@
 set -euo pipefail
 umask 077
 
+export PATH="/home/chuck/.nvm/versions/node/v22.22.2/bin:/home/chuck/bin:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/usr/local/bin:/usr/bin:/bin:/snap/bin:${PATH:-}"
+
 BACKUP_DIR="${BACKUP_DIR:-$HOME/Backups/openclaw}"
 OFFSITE_DIR="${OFFSITE_DIR:-$BACKUP_DIR/offsite}"
 KEY_PATH="${OPENCLAW_BACKUP_KEY_PATH:-$HOME/.secrets/openclaw-backup-offsite.key}"

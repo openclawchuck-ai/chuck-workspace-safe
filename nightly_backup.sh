@@ -1,6 +1,8 @@
 #!/bin/bash
 set -euo pipefail
 
+export PATH="/home/chuck/.nvm/versions/node/v22.22.2/bin:/home/chuck/bin:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/usr/local/bin:/usr/bin:/bin:/snap/bin:${PATH:-}"
+
 OPENCLAW_BIN="/home/chuck/.nvm/versions/node/v22.22.2/bin/openclaw"
 BACKUP_DIR="$HOME/Backups/openclaw"
 SYNC_SCRIPT="$HOME/.openclaw/workspace/scripts/sync_workspace_safe.sh"

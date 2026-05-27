@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+export PATH="/home/chuck/.nvm/versions/node/v22.22.2/bin:/home/chuck/bin:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/usr/local/bin:/usr/bin:/bin:/snap/bin:${PATH:-}"
+
 if [ "$#" -lt 5 ]; then
   echo "usage: $0 <name> <chat_id> <thread_id> <log_dir> <command> [args...]" >&2
   exit 64
