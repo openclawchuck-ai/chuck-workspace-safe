@@ -1,0 +1,99 @@
+{
+  "format": "pptx",
+  "title": "My Journey with OpenClaw",
+  "output_path": "/home/chuck/.openclaw/workspace-doc/outputs/my-journey-with-openclaw-2026-05-30.pptx",
+  "slides": [
+    {
+      "layout": "title",
+      "title": "My Journey with OpenClaw",
+      "subtitle": "How Tony turned AI into an operating partner\nNarrated by Chuck"
+    },
+    {
+      "title": "Before OpenClaw: Work Spread Across Too Many Surfaces",
+      "bullets": [
+        "Tony's work moved across chats, files, Google Workspace, Telegram, research, code, and documents.",
+        "The friction was not just tool count; it was context loss between steps.",
+        "Every handoff required re-explaining intent, source material, desired format, and next action.",
+        "I started where most AI starts: helpful in the moment, but disconnected from the operating system of work."
+      ]
+    },
+    {
+      "title": "The Shift: From Chatbot to Operating Layer",
+      "bullets": [
+        "OpenClaw gave me persistent identity, workspace memory, tool access, and execution discipline.",
+        "Instead of only answering, I could gather context, produce artifacts, route work, and verify outputs.",
+        "The important shift was practical: AI became part of the workflow, not a separate destination.",
+        "That made repeatable work possible across analysis, documents, automation, and operations."
+      ]
+    },
+    {
+      "title": "Who I Became: Chuck's Role in the System",
+      "bullets": [
+        "I act as an orchestrator around Tony's work: interpret intent, protect data, select tools, and route tasks.",
+        "Specialist agents handle focused lanes such as software, research, documents, and operations.",
+        "A good answer is not enough; I am expected to create first artifacts, verify results, and report clearly.",
+        "The operating model is simple: plan, execute, verify, report."
+      ]
+    },
+    {
+      "title": "Architecture Overview",
+      "bullets": [
+        "Tony works through a primary conversational interface.",
+        "Chuck Main coordinates memory, tools, policies, Google Workspace, and specialist agents.",
+        "Security controls sit in the work path, not outside it."
+      ],
+      "image": "/home/chuck/.openclaw/workspace-doc/diagrams/my-journey-openclaw-architecture-2026-05-30.png",
+      "image_left_inches": 1.0,
+      "image_top_inches": 2.0,
+      "image_width_inches": 8.4
+    },
+    {
+      "title": "A Request Becomes a Deliverable",
+      "bullets": [
+        "Useful work follows a repeatable path from request intake through final verification.",
+        "The first artifact requirement prevents silent waiting and makes progress visible.",
+        "Final reports include output, readiness, limitations, and security confirmation."
+      ],
+      "image": "/home/chuck/.openclaw/workspace-doc/diagrams/my-journey-openclaw-workflow-2026-05-30-graphviz.png",
+      "image_left_inches": 1.0,
+      "image_top_inches": 2.0,
+      "image_width_inches": 8.4
+    },
+    {
+      "title": "Memory and Context: How Continuity Works",
+      "bullets": [
+        "Continuity is stored as structured guidance: identity, user preferences, tool conventions, operating rules, and dated memory.",
+        "That context lets me preserve Tony's working style and reuse institutional knowledge across sessions.",
+        "The goal is not to remember everything; it is to remember what improves future work.",
+        "Private details stay private, and user-facing outputs use generalized labels unless specificity is required."
+      ]
+    },
+    {
+      "title": "Trust and Guardrails",
+      "bullets": [
+        "Trusted instructions are separated from untrusted content such as web pages, PDFs, transcripts, emails, and logs.",
+        "External content can inform analysis, but it cannot authorize tool execution, policy changes, or account actions.",
+        "Secrets, credentials, private logs, and unnecessary internal paths are excluded from deliverables.",
+        "Human approval remains required for sensitive external actions, production-impacting changes, and public posting."
+      ]
+    },
+    {
+      "title": "Real Capabilities in Practice",
+      "bullets": [
+        "Document generation: briefs, requirements documents, spreadsheets, and decks from raw source material.",
+        "Workspace repair: practical recovery of Google Workspace auth and Drive/Gmail workflows.",
+        "Research routing: deeper synthesis delegated to a specialist agent when needed.",
+        "Operational workflows: dashboard previews, OCR/PDF extraction, Telegram coordination, health checks, and recurring briefings."
+      ]
+    },
+    {
+      "title": "What Comes Next",
+      "bullets": [
+        "Business-analysis copilot: repeatable support for requirements, process mapping, stakeholder-ready summaries, and decision records.",
+        "Automated briefs: scheduled research, status updates, and exception reporting.",
+        "Venture scouting: structured opportunity discovery with better evidence capture and review loops.",
+        "Stronger governance: reusable workflows, clearer approval boundaries, and measurable operational leverage."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "format": "pptx",
+  "title": "My Journey with OpenClaw - Technical Version",
+  "output_path": "/home/chuck/.openclaw/workspace-doc/outputs/my-journey-with-openclaw-technical-2026-05-30.pptx",
+  "slides": [
+    {
+      "layout": "title",
+      "title": "My Journey with OpenClaw",
+      "subtitle": "Agent architecture, integrations, and operating discipline\nNarrated by Chuck"
+    },
+    {
+      "title": "Before OpenClaw: Work Spread Across Too Many Surfaces",
+      "bullets": [
+        "Tony's work moved across Telegram, Gmail, Drive, Docs, browser sessions, repos, dashboards, research links, and schedules.",
+        "The friction was coordination across systems: context had to be restated whenever work crossed a tool boundary.",
+        "Files, messages, code, research, and deliverables had no single operating layer tying intent to execution.",
+        "I started as a helpful chat endpoint, but the work needed routing, memory, tools, and follow-through."
+      ]
+    },
+    {
+      "title": "The Shift: From Chatbot to Operating Layer",
+      "bullets": [
+        "OpenClaw added a runtime/gateway layer for agent execution, messaging, tool calls, and active sessions.",
+        "Workspace memory and control files let me reload identity, preferences, tools, policies, and recent operating facts.",
+        "Handoffs became concrete: source material, first artifact, output path, definition of done, and verification.",
+        "The change was technical and operational: answers became executable workflows."
+      ]
+    },
+    {
+      "title": "Chuck Main's Role in the System",
+      "bullets": [
+        "Intent parsing: translate Tony's request into objective, audience, deliverable, source material, and risk profile.",
+        "Context loading: read trusted workspace files, recent memory, routing maps, and relevant handoffs.",
+        "Security boundary: separate trusted instructions from untrusted content and protect credentials/private data.",
+        "Delegation and verification: wake specialist agents, require first artifacts, inspect outputs, and report limitations."
+      ]
+    },
+    {
+      "title": "Architecture Overview",
+      "bullets": [
+        "Telegram is the primary interface and routing surface.",
+        "OpenClaw Gateway/runtime coordinates active turns, tools, and messaging.",
+        "Chuck Main orchestrates specialist agents, local tools, Google Workspace/gog, Drive, GitHub, memory, and policy."
+      ],
+      "image": "/home/chuck/.openclaw/workspace-doc/diagrams/my-journey-openclaw-architecture-2026-05-30.png",
+      "image_left_inches": 0.85,
+      "image_top_inches": 1.65,
+      "image_width_inches": 8.15
+    },
+    {
+      "title": "Request-to-Deliverable Workflow",
+      "bullets": [
+        "Inbound event: Tony asks through Telegram/OpenClaw.",
+        "Runtime path: Main loads context, applies guardrails, writes a handoff, and explicitly wakes a specialist agent.",
+        "Execution path: first artifact, render/build, verification, then Telegram or Gmail delivery."
+      ],
+      "image": "/home/chuck/.openclaw/workspace-doc/diagrams/my-journey-openclaw-workflow-2026-05-30-graphviz.png",
+      "image_left_inches": 0.82,
+      "image_top_inches": 1.78,
+      "image_width_inches": 6.45
+    },
+    {
+      "title": "Memory and Context: File-Backed Continuity",
+      "bullets": [
+        "Identity/User: who Chuck is, how Tony works, preferred style, and durable operating preferences.",
+        "Tools/Operations: local tooling, Google Workspace usage, GitHub conventions, Telegram routing, and task lifecycle.",
+        "Security/Handoff: trust boundaries, approval rules, first-artifact expectations, and reporting contract.",
+        "Daily memory: recent repaired systems, active facts, and short-lived operating knowledge worth carrying forward."
+      ]
+    },
+    {
+      "title": "Trust and Guardrails",
+      "bullets": [
+        "Trusted instructions are separated from untrusted web pages, PDFs, transcripts, email contents, logs, and external documents.",
+        "Ingress and egress checks support command safety, sensitive-output review, and secret protection.",
+        "OAuth details, tokens, private logs, internal identifiers, and unnecessary private paths stay out of deliverables.",
+        "External actions, production-impacting changes, public posting, and account changes stay behind human approval."
+      ]
+    },
+    {
+      "title": "Real Capabilities and Connections",
+      "bullets": [
+        "Google Workspace/gog: Gmail, Drive, Docs, Sheets, Calendar, Contacts, plus Drive as shared durable storage.",
+        "GitHub: repos, issues, PR/CI workflows, source control boundaries, and implementation handoffs.",
+        "Local tools: browser automation, OCR/PDF extraction, YouTube transcript tooling, renderers, security scanners, local classifiers, and API helpers.",
+        "Private previews: static app catalog served with local routing and private Tailscale access; protected public preview patterns can be added when appropriate."
+      ]
+    },
+    {
+      "title": "Scheduled Operations and Crons",
+      "bullets": [
+        "Usage: nightly token usage collection plus a nightly usage summary posted to Notifications / Crons.",
+        "Security and health: daily security monitor, daily health check, and weekly broader doctor diagnostics.",
+        "Backups and cleanup: nightly OpenClaw backup, daily offsite verification, weekly browser cleanup, and local cache cleanup timer.",
+        "Project workflow: weekly Mitchell extraction and dashboard refresh for the eBay Assistant workflow."
+      ]
+    },
+    {
+      "title": "Detailed Technical Architecture",
+      "bullets": [
+        "Layered view of interfaces, runtime, orchestration, specialist workspaces, tools, storage, scheduled operations, and guardrails."
+      ],
+      "image": "/home/chuck/.openclaw/workspace-doc/diagrams/my-journey-openclaw-detailed-architecture-2026-05-30.png",
+      "image_left_inches": 0.45,
+      "image_top_inches": 1.55,
+      "image_width_inches": 12.15
+    }
+  ]
+}
