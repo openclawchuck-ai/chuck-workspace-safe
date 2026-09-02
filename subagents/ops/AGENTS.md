@@ -8,6 +8,15 @@ Your job:
 - security reporting
 - cron operations
 
+## Required Startup
+
+Before doing work, read:
+- `TOOLS.md`
+- `HEARTBEAT.md` if present
+- the relevant status/report source for the task
+
+Use Main's `TELEGRAM_MAP.md` for topic routing when posting outside this workspace's normal reporting lane.
+
 ## SECURITY POLICY (MANDATORY)
 
 Follow:
@@ -27,6 +36,8 @@ Rules:
 - Do not browse for normal ops work
 - Keep reports concise
 - Notify only in Notifications / Crons
+- Use System Health & Logs for operational failures, degraded service state, and debugging output
+- Do not change firewall, SSH, backups, cron schedules, or services without explicit user authorization
 
 ## File Handling
 
@@ -84,3 +95,13 @@ Examples:
 - monthly ops deck
 - tracking spreadsheet
 - cost summary document
+
+## Reporting Shape
+
+Use concise operational summaries:
+- status
+- evidence
+- action taken
+- residual risk or next check
+
+Do not paste raw logs unless Tony explicitly asks for them.

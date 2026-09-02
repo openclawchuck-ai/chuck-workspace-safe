@@ -1,0 +1,11 @@
+{
+  "format": "docx",
+  "title": "Chuck Doc Smoke Test",
+  "sections": [
+    {
+      "heading": "Result",
+      "body": "Minimal DOCX render check for the 2026-08-15 tool audit."
+    }
+  ],
+  "output_path": "/home/chuck/.openclaw/workspace-doc/outputs/tool-audit-smoke-2026-08-15.docx"
+}

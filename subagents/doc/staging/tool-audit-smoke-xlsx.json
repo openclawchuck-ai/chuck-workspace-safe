@@ -1,0 +1,9 @@
+{
+  "format": "xlsx",
+  "title": "Smoke",
+  "rows": [
+    ["Check", "Status"],
+    ["Minimal XLSX render", "OK"]
+  ],
+  "output_path": "/home/chuck/.openclaw/workspace-doc/outputs/tool-audit-smoke-2026-08-15.xlsx"
+}

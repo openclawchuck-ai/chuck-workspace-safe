@@ -60,8 +60,11 @@ Prefer exact paths for approval-friendly execution:
 - `/usr/bin/chmod`
 - `/usr/bin/python3`
 - `/usr/bin/rsync`
-- `/home/chuck/.nvm/versions/node/v22.22.2/bin/node`
-- `/home/chuck/.nvm/versions/node/v22.22.2/bin/npm`
+- `/home/chuck/.nvm/versions/node/v24.19.0/bin/node`
+- `/home/chuck/.nvm/versions/node/v24.19.0/bin/npm`
+- `/home/linuxbrew/.linuxbrew/opt/node@24/bin/node`
+
+Note: `/usr/bin/node` may lag behind the supported OpenClaw runtime. Prefer the Node 24 paths above.
 
 ---
 
@@ -208,6 +211,7 @@ Global policy:
 
 `/home/chuck/repos/chuck-workspace-safe/SECURITY_POLICY.md`
 
+---
 
 ## Shopify - Mitchell Reel Parts
 
@@ -218,13 +222,11 @@ Production app:
 chuck-mitchell-prod
 
 Credentials:
-Loaded through ~/.config/openclaw/openclaw.env
+Loaded through the local OpenClaw environment/config path.
 
-Environment variables:
-- SHOPIFY_STORE
-- SHOPIFY_CLIENT_ID
-- SHOPIFY_CLIENT_SECRET
-- SHOPIFY_ADMIN_TOKEN
+Environment:
+- Loaded locally when explicitly needed.
+- Do not print, copy, or document raw Shopify environment values.
 
 Operational guidance:
 - Use Admin API for catalog, products, collections, orders, themes, and inventory.

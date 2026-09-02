@@ -1,7 +1,7 @@
 #!/bin/bash
 set -euo pipefail
 
-OPENCLAW_BIN="/home/chuck/.nvm/versions/node/v22.22.2/bin/openclaw"
+OPENCLAW_BIN="/home/chuck/.nvm/versions/node/v24.19.0/bin/openclaw"
 export OPENCLAW_NO_RESPAWN=1
 export CI=1
 

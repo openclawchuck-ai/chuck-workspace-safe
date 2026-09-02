@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -u
 
-export PATH="/home/chuck/.nvm/versions/node/v22.22.2/bin:/home/chuck/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
-OPENCLAW="/home/chuck/.nvm/versions/node/v22.22.2/bin/openclaw"
+export PATH="/home/chuck/.nvm/versions/node/v24.19.0/bin:/home/chuck/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+OPENCLAW="/home/chuck/.nvm/versions/node/v24.19.0/bin/openclaw"
 TG_POST="/home/chuck/bin/tg_post"
 CHAT_ID="-1003843810073"
 THREAD_ID="2"

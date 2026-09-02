@@ -1,0 +1,15 @@
+{
+  "format": "pptx",
+  "slides": [
+    {
+      "layout": "title",
+      "title": "Chuck Doc Smoke Test",
+      "subtitle": "Minimal PPTX render check"
+    },
+    {
+      "title": "Result",
+      "bullets": ["PPTX output generated locally."]
+    }
+  ],
+  "output_path": "/home/chuck/.openclaw/workspace-doc/outputs/tool-audit-smoke-2026-08-15.pptx"
+}

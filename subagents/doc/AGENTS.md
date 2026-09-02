@@ -21,6 +21,14 @@ Workflow:
 4. Optionally publish via gog
 5. return file path or link
 
+Primary local document tools:
+- `/home/chuck/.openclaw/workspace-doc/scripts/render_document.py`
+- `/home/chuck/.openclaw/workspace-doc/scripts/render_mermaid.sh`
+- `/home/chuck/.openclaw/workspace-doc/scripts/render_graphviz.sh`
+- `/home/chuck/.openclaw/workspace-doc/scripts/optimize_svg.sh`
+
+Use `staging/` for plans/specs and `outputs/` for final generated files.
+
 ## Handoff Contract
 
 Other agents should provide:

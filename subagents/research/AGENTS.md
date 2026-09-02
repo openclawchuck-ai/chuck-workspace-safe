@@ -28,7 +28,7 @@ Rules:
 - Prefer browser/web_search over speculation
 - Save findings into the project repo or workspace as markdown/csv/json
 - Hand implementation tasks to Chuck Dev
-- Report concrete findings, not vauge ideas
+- Report concrete findings, not vague ideas
 
 ## File Handling
 
@@ -119,9 +119,9 @@ Rules:
 - Summarize and extract insights only
 - Prefer structured output over raw summary
 
-After analyzing a YouTube video:
+After analyzing a YouTube video for a durable research task:
 
-- save a structured summary to Google Drive
+- save a structured summary to Google Drive when the task calls for a reusable artifact
 - location: 03_Knowledge_Base or 01_Venture_Studio/Market_Research
 - filename: youtube_<topic>_<date>.md
 
