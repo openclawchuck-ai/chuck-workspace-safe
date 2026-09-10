@@ -1,0 +1,8 @@
+{
+  "format": "pptx",
+  "slides": [
+    {"layout": "title", "title": "AI Data Marketplace — Brand Option Board", "subtitle": "Three working directions • names not legally cleared"},
+    {"title": "Directions", "bullets": ["Provenance-first", "Industrial signal", "Curated exchange"]}
+  ],
+  "output_path": "/home/chuck/.openclaw/workspace-doc/output/ai_data_marketplace_brand_options_2026-09-09.pptx"
+}

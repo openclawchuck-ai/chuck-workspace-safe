@@ -1,0 +1,30 @@
+{
+  "project": "DataFoundry Exchange business plan",
+  "audience": "Anthony Pantuso; adaptable for advisors, partners, and investors",
+  "objective": "Convert the approved research plan into a polished, decision-ready Word business plan without changing its claims or citations.",
+  "source": "/home/chuck/.openclaw/workspace-research/ai_data_exchange_business_plan_2026-09-08.md",
+  "output": "/home/chuck/.openclaw/workspace-doc/output/ai_data_exchange_business_plan_2026-09-08.docx",
+  "structure": [
+    "Title page",
+    "Clickable table of contents",
+    "Executive summary",
+    "Sections 1–15",
+    "Sources consulted",
+    "Research limitations"
+  ],
+  "style": {
+    "direction": "restrained modern business",
+    "palette": ["navy", "teal", "charcoal", "light gray"],
+    "page_size": "US Letter",
+    "tables": "header shading, repeating headers, compact readable typography",
+    "footer": "document title and dynamic page number"
+  },
+  "quality_checks": [
+    "DOCX opens as a valid ZIP package",
+    "source headings, tables, citations, and URLs preserved",
+    "TOC field present and clickable",
+    "page numbering field present",
+    "PDF rendering completed",
+    "rendered pages visually inspected for clipping, overlap, and table defects"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "format": "docx",
+  "title": "AI Data Marketplace — Formation Action Plan",
+  "sections": [
+    {"heading": "Decision gate", "body": "Tony selects the formation state after counsel and tax review; no state is assumed."},
+    {"heading": "Scope", "body": "Name, state, registered agent, filing, EIN, operating agreement, beneficial ownership, banking, accounting, insurance, contracts, taxes, permits, privacy/security, IP, and post-formation calendar."}
+  ],
+  "output_path": "/home/chuck/.openclaw/workspace-doc/output/ai_data_marketplace_formation_action_plan_2026-09-09.docx"
+}

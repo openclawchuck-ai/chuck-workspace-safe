@@ -1,0 +1,9 @@
+{
+  "format": "docx",
+  "title": "AI Data Marketplace — 90-Day Validation Playbook",
+  "sections": [
+    {"heading": "Purpose", "body": "Concierge validation for permissioned industrial maintenance and inspection data."},
+    {"heading": "Human approval boundary", "body": "Agents may prepare and route; humans approve rights, privacy, data access, outreach, commercial terms, contracts, and payments."}
+  ],
+  "output_path": "/home/chuck/.openclaw/workspace-doc/output/ai_data_marketplace_90_day_validation_playbook_2026-09-09.docx"
+}

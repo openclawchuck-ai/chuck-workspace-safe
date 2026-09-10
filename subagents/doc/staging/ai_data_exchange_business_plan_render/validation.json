@@ -1,0 +1,19 @@
+{
+  "pageCount": 2,
+  "dimensions": [
+    {
+      "page": 1,
+      "scrollWidth": 816,
+      "clientWidth": 816,
+      "scrollHeight": 1056,
+      "clientHeight": 1056
+    },
+    {
+      "page": 2,
+      "scrollWidth": 816,
+      "clientWidth": 816,
+      "scrollHeight": 11939,
+      "clientHeight": 11939
+    }
+  ]
+}
