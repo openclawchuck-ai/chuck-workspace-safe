@@ -1,0 +1,11 @@
+{
+  "objective": "Record completed AssetCorpus Gate 0 strategy decisions consistently in two existing founder documents.",
+  "decision_date": "October 6, 2026",
+  "decisions": {
+    "funding": "Bootstrap/self-funded, with a hard $5,000 startup proof-of-concept ceiling and itemized founder approval required before any spending.",
+    "relationships": "No existing relationships in data-rich industries; validation will use a U.S.-only cold-start discovery pipeline.",
+    "near_term_objective": "Tony will personally validate before recruiting a founding team or raising outside capital.",
+    "geography": "United States first for commercial validation, not Florida-only; corrosion/NDT outreach may initially concentrate on Gulf Coast-heavy markets while remaining nationwide. Florida may remain the formation jurisdiction, subject to the separate formation decision process."
+  },
+  "authorization_boundary": "These are strategy decisions only. They do not authorize formation filing, spending, outreach, fundraising, recruiting, or any other external commitment."
+}

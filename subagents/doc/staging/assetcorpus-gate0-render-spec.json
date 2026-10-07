@@ -1,0 +1,15 @@
+{
+  "format": "docx",
+  "title": "AssetCorpus Gate 0 Revision Record",
+  "output_path": "staging/assetcorpus-gate0-revision-record.docx",
+  "sections": [
+    {
+      "heading": "Decision record",
+      "body": "Completed October 6, 2026: bootstrap/self-funded; hard $5,000 proof-of-concept ceiling with itemized founder approval before spending; no warm industry network; U.S.-only cold-start discovery; founder-led validation before team recruitment or outside capital; U.S.-first commercial validation, with Florida potentially remaining the formation jurisdiction."
+    },
+    {
+      "heading": "Authorization boundary",
+      "body": "The strategy decisions do not authorize formation filing, spending, outreach, fundraising, recruiting, or other external commitments."
+    }
+  ]
+}
