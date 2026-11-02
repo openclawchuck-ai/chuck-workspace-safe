@@ -103,3 +103,20 @@ Rules:
 - do not overwrite original files
 - always create .ocr.pdf outputs
 - prefer OCR before giving up on a document
+
+## Tools
+
+### Local notes (migrated from TOOLS.md)
+
+# Tools
+
+Local:
+- render_document.py
+
+Google:
+- gog docs
+- gog sheets
+- gog slides
+
+Output:
+- ~/.openclaw/workspace-doc/outputs/

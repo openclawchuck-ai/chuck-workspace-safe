@@ -293,7 +293,7 @@ Rules:
 
 Private app catalog base:
 
-`https://a5.tail01e0a2.ts.net/apps/`
+`https://a5.openclawchuck.com/apps/`
 
 Local root:
 
@@ -303,9 +303,9 @@ Caddy serves local previews from:
 
 `/home/chuck/previews`
 
-Tailscale Serve points to Caddy:
+Cloudflare Tunnel routes authenticated dashboard traffic to the local Caddy server.
 
-`tailscale serve --bg http://127.0.0.1:4300`
+Cloudflare Access protects the catalog and dashboard hostnames.
 
 Publish static apps with:
 
@@ -317,7 +317,7 @@ Rebuild catalog with:
 
 URL pattern:
 
-`https://a5.tail01e0a2.ts.net/apps/<project-slug>/current/`
+`https://a5.openclawchuck.com/apps/<project-slug>/current/`
 
 Rules:
 - static dashboards should be published here

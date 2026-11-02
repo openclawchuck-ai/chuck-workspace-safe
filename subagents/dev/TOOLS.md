@@ -169,7 +169,7 @@ Rules:
 
 Private app catalog:
 
-`https://a5.tail01e0a2.ts.net/apps/`
+`https://a5.openclawchuck.com/apps/`
 
 Publisher:
 
@@ -181,7 +181,7 @@ Catalog rebuild:
 
 URL pattern:
 
-`https://a5.tail01e0a2.ts.net/apps/<project-slug>/current/`
+`https://a5.openclawchuck.com/apps/<project-slug>/current/`
 
 Rules:
 - use stable project slugs
